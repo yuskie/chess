@@ -1,0 +1,84 @@
+.default {
+	height: 100px;
+	width: 100px;
+}
+
+.white {
+	background-color: white;
+}
+
+.black {
+	background-color: DarkSlateGrey;
+}
+
+.b-B {
+	background-image: url('../img/b-B.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.b-K {
+	background-image: url('../img/b-K.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.b-KN {
+	background-image: url('../img/b-KN.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.b-P {
+	background-image: url('../img/b-P.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.b-Q {
+	background-image: url('../img/b-Q.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.b-R {
+	background-image: url('../img/b-R.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.w-B {
+	background-image: url('../img/w-B.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.w-K {
+	background-image: url('../img/w-K.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.w-KN {
+	background-image: url('../img/w-KN.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.w-P {
+	background-image: url('../img/w-P.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.w-Q {
+	background-image: url('../img/w-Q.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.w-R {
+	background-image: url('../img/w-R.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}

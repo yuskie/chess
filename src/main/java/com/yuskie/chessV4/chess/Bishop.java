@@ -8,10 +8,12 @@ import com.yuskie.chessV4.chess.Utility.Color;
 public class Bishop implements Piece {
 	private Color color;
 	private boolean moved;
+	private String pieceString;
 
 	public Bishop(Color color) {
 		this.color = color;
 		this.moved = false;
+		this.pieceString = print();
 	}
 	
 	public boolean validMove(String startLocation, String endLocation) {
@@ -38,5 +40,9 @@ public class Bishop implements Piece {
 	
 	public boolean isMoved(){
 		return this.moved;
+	}
+
+	public String getPieceString() {
+		return pieceString;
 	}
 }

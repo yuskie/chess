@@ -8,10 +8,12 @@ public class Pawn implements Piece {
 	private boolean moved;
 	private static final int MAX_DISTANCE = 2;
 	private static final int NORMAL_DISTANCE = 1;
+	private String pieceString;
 
 	public Pawn(Color color) {
 		this.color = color;
-		moved = false;
+		this.moved = false;
+		this.pieceString = print();
 	}	
 	
 	public boolean validMove(String startLocation, String endLocation) {
@@ -48,5 +50,9 @@ public class Pawn implements Piece {
 
 	public boolean isMoved() {
 		return this.moved;
+	}
+	
+	public String getPieceString() {
+		return pieceString;
 	}
 }

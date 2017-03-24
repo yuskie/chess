@@ -5,53 +5,45 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Toggle!</title>
+    <title>Chess!</title>
     <script src="<c:url value='/js/jquery-1.6.4.js'/>"></script>
     <script src="<c:url value='/js/sockjs.min.js'/>"></script>
     <script src="<c:url value='/js/stomp.min.js'/>"></script>
-    <script src="<c:url value='/js/toggle.js'/>"></script>
-    <style>
-        td {
-            height: 25px;
-            width: 25px;
-        }
-
-        .default {
-            background-color: gainsboro;
-        }
-
-        .rounded-box {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border-radius: 4px;
-        }
-
-        .selected {
-            border: 2px solid #000;
-        }
-    </style>
+    <script src="<c:url value='/js/movement.js'/>"></script>
+	<link rel="stylesheet" type="text/css" href="<c:url value='/css/chess.css'/>">
+	<link rel="stylesheet" type="text/css" href="<c:url value='/css/bootstrap.min.css'/>">
+ 
 </head>
 <body>
-    <div>
-        <div class="rounded-box" style="background-color: #FF0000;"></div>
-        <div class="rounded-box" style="background-color: #FFC0CB;"></div>
-        <div class="rounded-box" style="background-color: #FFA500;"></div>
-        <div class="rounded-box" style="background-color: #FFFF00;"></div>
-        <div class="rounded-box" style="background-color: #800080;"></div>
-        <div class="rounded-box" style="background-color: #008000;"></div>
-        <div class="rounded-box" style="background-color: #4682B4;"></div>
-        <div class="rounded-box" style="background-color: #A52A2A;"></div>
-    </div>
-
-    <table>
-
-		<c:forEach begin="0" end="9" var="row">
-            <tr>
-                <c:forEach begin="0" end="9" var="col">
-                    <td class="default" data-row="${row}" data-col="${col}"></td>
+    <table class="table-bordered">
+		<c:set var="xValues" value="${['a','b','c','d','e','f','g','h']}"/>
+		<c:set var="flip" value="false"/>
+		<c:forEach begin="1" end="8" var="y">
+            <tr data="row-${y}">
+                <c:forEach items="${xValues}" var="x">
+                	<c:choose>
+                		<c:when test="${flip}">
+                			<c:set var="color" value="black"/>
+                 			<c:set var="flip" value="${not flip}"/>               			
+                		</c:when>
+                		<c:otherwise>
+							<c:set var="color" value="white" />
+                 			<c:set var="flip" value="${not flip}"/>               			
+						</c:otherwise>
+                	</c:choose>
+                    <td class="default ${color}" data="${x}${9-y}"></td>
                 </c:forEach>
-            </tr>
+				<c:choose>
+					<c:when test="${flip}">
+						<c:set var="color" value="black" />
+						<c:set var="flip" value="${not flip}" />
+					</c:when>
+					<c:otherwise>
+						<c:set var="color" value="white" />
+						<c:set var="flip" value="${not flip}" />
+					</c:otherwise>
+				</c:choose>
+			</tr>
         </c:forEach>
 
     </table>

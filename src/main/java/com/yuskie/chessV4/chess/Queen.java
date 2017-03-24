@@ -6,10 +6,12 @@ import static com.yuskie.chessV4.chess.Utility.*;
 public class Queen implements Piece {
 	private Color color;
 	private boolean moved;
+	private String pieceString;
 	
 	public Queen(Color color) {
 		this.color = color;
 		this.moved = false;
+		this.pieceString = print();
 	}
 	
 	public boolean validMove(String startLocation, String endLocation) {
@@ -36,5 +38,9 @@ public class Queen implements Piece {
 	
 	public boolean isMoved(){
 		return this.moved;
+	}
+	
+	public String getPieceString() {
+		return pieceString;
 	}
 }

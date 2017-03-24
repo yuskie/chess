@@ -4,13 +4,15 @@ import com.yuskie.chessV4.chess.Utility.Color;
 import static com.yuskie.chessV4.chess.Utility.*;
 
 public class King implements Piece {
-	Color color;
+	private Color color;
 	private static final int MAX_NORMAL_MOVEMENT = 1;
-	boolean moved;
+	private boolean moved;
+	private String pieceString;
 	
 	public King(Color color) {
 		this.color = color;
-		moved = false;
+		this.moved = false;
+		this.pieceString = print();
 	}
 	
 	public boolean validMove(String startLocation, String endLocation) {
@@ -37,5 +39,9 @@ public class King implements Piece {
 
 	public void moved() {
 		this.moved = true;
+	}
+	
+	public String getPieceString() {
+		return pieceString;
 	}
 }

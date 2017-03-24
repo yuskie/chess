@@ -2,6 +2,9 @@
 	height: 100px;
 	width: 100px;
 }
+table{
+	margin:auto;
+}
 
 .white {
 	background-color: white;
